@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salim App Zone</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(145deg, #0b0c1e 0%, #1a1f3a 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .card {
+            max-width: 700px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 30px;
+            padding: 30px 25px;
+            box-shadow: 0 25px 50px -8px rgba(0, 0, 0, 0.6);
+            animation: fadeIn 0.8s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 2.2rem;
+            color: #fff;
+            text-shadow: 0 2px 10px rgba(0, 200, 255, 0.5);
+        }
+
+        .header p {
+            color: #b0b7d3;
+            font-size: 1rem;
+            margin-top: 8px;
+            letter-spacing: 0.5px;
+        }
+
+        .section-title {
+            color: #a5b4fc;
+            font-size: 1.4rem;
+            margin: 25px 0 15px 0;
+            border-left: 5px solid #3b82f6;
+            padding-left: 15px;
+        }
+
+        .app-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            width: 100%;
+            padding: 14px 10px;
+            border-radius: 16px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-align: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn-app {
+            background: linear-gradient(145deg, #2a2f4b, #1e2338);
+            color: #e0e7ff;
+            border: 1px solid #4f5b9b;
+        }
+
+        .btn-app:hover {
+            transform: translateY(-4px);
+            background: linear-gradient(145deg, #3a4060, #2a2f4b);
+            border-color: #7a8cff;
+            box-shadow: 0 12px 28px rgba(122, 140, 255, 0.3);
+            color: #fff;
+        }
+
+        .btn-xml {
+            background: linear-gradient(145deg, #1e3a5f, #0f2b44);
+            color: #b8e2ff;
+            border: 1px solid #3b82f6;
+        }
+
+        .btn-xml:hover {
+            transform: translateY(-4px);
+            background: linear-gradient(145deg, #2b4b77, #1a3457);
+            border-color: #60a5fa;
+            box-shadow: 0 12px 28px rgba(59, 130, 246, 0.3);
+            color: #fff;
+        }
+
+        .btn-youtube {
+            background: linear-gradient(145deg, #a31f1f, #6b0f0f);
+            color: #ffe5e5;
+            border: 1px solid #ff4d4d;
+        }
+
+        .btn-youtube:hover {
+            transform: translateY(-4px);
+            background: linear-gradient(145deg, #c62828, #8b1a1a);
+            border-color: #ff8080;
+            box-shadow: 0 12px 28px rgba(255, 0, 0, 0.3);
+            color: #fff;
+        }
+
+        .btn-telegram {
+            background: linear-gradient(145deg, #1e4f6b, #0f3a4f);
+            color: #c2e9ff;
+            border: 1px solid #2aa3e0;
+        }
+
+        .btn-telegram:hover {
+            transform: translateY(-4px);
+            background: linear-gradient(145deg, #2a6b8f, #1a4d66);
+            border-color: #5bc0ff;
+            box-shadow: 0 12px 28px rgba(0, 150, 255, 0.3);
+            color: #fff;
+        }
+
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin: 20px 0 10px;
+        }
+
+        .footer-note {
+            margin-top: 40px;
+            text-align: center;
+            color: #7e8ab8;
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+        }
+
+        .footer-note a {
+            color: #9bb3ff;
+            text-decoration: none;
+        }
+
+        /* মোবাইল ফ্রেন্ডলি */
+        @media (max-width: 500px) {
+            .card { padding: 20px 15px; }
+            .header h1 { font-size: 1.8rem; }
+            .btn { padding: 12px 8px; font-size: 0.9rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <!-- হেডার / ওয়েলকাম মেসেজ -->
+        <div class="header">
+            <h1>✨ Welcome to Salim App Zone ✨</h1>
+            <p>আপনার প্রিয় সব অ্যাপ ও রিসোর্স এক জায়গায়</p>
+        </div>
+
+        <!-- অ্যাপ ডাউনলোড বাটন (৫টি) -->
+        <div class="section-title">📲 অ্যাপ ডাউনলোড</div>
+        <div class="app-grid">
+            <a href="https://www.dropbox.com/scl/fi/192m26gl51scwdb9cembe/After-motion.apk?rlkey=cjm8oal70n8f1mfy75qtszzee&st=kxd6mdjc&dl=0" class="btn btn-app">After Mation Z</a>
+            <a href="https://www.dropbox.com/scl/fi/fkgoctqwgtav3pmtqiolu/Alight-Motion.apk?rlkey=qmhcjm770lqbwh8zfwsaazsr0&st=jolbpjg7&dl=0" class="btn btn-app">Alight Motion</a>
+            <a href="https://www.dropbox.com/scl/fi/jlhwrtfnmaaxkbsbi1ohe/AM-ZID.apk?rlkey=k1f7f0agil12btlhi2e809icz&st=zy75cedk&dl=0" class="btn btn-app">AM ZID</a>
+            <a href="https://www.dropbox.com/scl/fi/ay8gi0uf4csy8ekwsnyze/Toji-Motion.apk?rlkey=54xyeit4xgmkatvdm3p0spc3f&st=nfocvyj0&dl=0" class="btn btn-app">Toji Mation</a>
+            <a href="#" class="btn btn-app">Vmake</a>
+        </div>
+
+        <!-- XML ডাউনলোড বাটন -->
+        <div class="section-title">📂 XML ফাইল</div>
+        <a href="https://t.me/xmlfilebox" class="btn btn-xml" download>📥 XML ফাইল ডাউনলোড করুন</a>
+
+        <!-- সোশ্যাল লিংক (ইউটিউব + টেলিগ্রাম) -->
+        <div class="section-title">🌐 সংযুক্ত থাকুন</div>
+        <div class="button-group">
+            <a href="https://www.youtube.com/@Salim.editzx" target="_blank" class="btn btn-youtube">▶️ ইউটিউব চ্যানেল</a>
+            <a href="https://t.me/+33Srlf8jLsZlYjA1" target="_blank" class="btn btn-telegram">✈️ টেলিগ্রাম চ্যানেল</a>
+        </div>
+
+        <!-- ফুটার (ঐচ্ছিক) -->
+        <div class="footer-note">
+            <p>ⓒ ২০২৬ Salim App Zone | সর্বস্বত্ব সংরক্ষিত</p>
+            <p>🔗 <a href="#">প্রাইভেসি পলিসি</a> | <a href="#">কন্টাক্ট</a></p>
+        </div>
+    </div>
+
+    <!-- ছোট জাভাস্ক্রিপ্ট (শুধু কনসোল ক্লিন) -->
+    <script>
+        console.log("Salim App Zone - Live!");
+    </script>
+</body>
+</html>
