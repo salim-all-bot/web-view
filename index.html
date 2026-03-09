@@ -1,16 +1,19 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Salim App Zone</title>
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <style>
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:"Poppins","Segoe UI",Tahoma,Geneva,Verdana,sans-serif;
+font-family:"Poppins","Segoe UI",Tahoma;
 }
 
 body{
@@ -30,27 +33,22 @@ border-radius:26px;
 padding:30px 24px;
 border:1px solid rgba(255,255,255,0.08);
 box-shadow:0 0 45px rgba(0,255,255,0.14);
-animation:fadeIn .7s ease;
 }
 
-@keyframes fadeIn{
-from{opacity:0;transform:translateY(18px);}
-to{opacity:1;transform:translateY(0);}
+.header{
+text-align:center;
+margin-bottom:26px;
 }
-
-.header{text-align:center;margin-bottom:26px;}
 
 .header h1{
 color:#00f7ff;
 font-size:2.1rem;
-letter-spacing:.5px;
 text-shadow:0 0 18px rgba(0,247,255,.35);
 }
 
 .header p{
 color:#9aa3d1;
 margin-top:10px;
-font-size:1rem;
 }
 
 .section-title{
@@ -68,23 +66,16 @@ gap:14px;
 .btn{
 display:block;
 width:100%;
-padding:14px 12px;
+padding:14px;
 border-radius:14px;
 text-align:center;
 text-decoration:none;
 font-weight:700;
-font-size:1rem;
-transition:.25s ease;
 }
 
 .btn-app{
 background:linear-gradient(45deg,#6a5cff,#00d4ff);
 color:#fff;
-}
-
-.btn-app:hover{
-transform:scale(1.04);
-box-shadow:0 0 18px rgba(0,229,255,.55);
 }
 
 .btn-xml{
@@ -110,28 +101,55 @@ background:linear-gradient(45deg,#00a3ff,#0077b6);
 color:#fff;
 }
 
-/* Chat Box */
-.chat-box{
-margin-top:15px;
-display:flex;
-flex-direction:column;
-gap:10px;
+/* SIDE CHAT ICON */
+
+.chat-toggle{
+position:fixed;
+right:20px;
+top:50%;
+transform:translateY(-50%);
+width:60px;
+height:60px;
+border-radius:50%;
+background:#0084ff;
+color:white;
+border:none;
+font-size:26px;
+cursor:pointer;
+box-shadow:0 0 15px rgba(0,0,0,0.4);
 }
 
-.chat-box textarea{
+/* CHAT WINDOW */
+
+.chat-window{
+position:fixed;
+right:90px;
+top:50%;
+transform:translateY(-50%);
+width:300px;
+background:#0f1224;
+border-radius:12px;
+box-shadow:0 0 15px rgba(0,0,0,0.5);
+padding:15px;
+display:none;
+}
+
+.chat-window textarea{
 width:100%;
-height:80px;
-border-radius:12px;
-padding:10px;
+height:90px;
+border-radius:10px;
 border:none;
+padding:10px;
 background:#0b0f2c;
-color:#fff;
+color:white;
 }
 
-.chat-box button{
+.chat-window button{
+margin-top:10px;
 padding:10px;
+width:100%;
 border:none;
-border-radius:12px;
+border-radius:10px;
 background:linear-gradient(45deg,#00f7ff,#6a5cff);
 color:white;
 font-weight:bold;
@@ -139,6 +157,7 @@ cursor:pointer;
 }
 
 #response{
+margin-top:10px;
 color:#9aa3d1;
 font-size:.9rem;
 }
@@ -152,14 +171,6 @@ border-top:1px solid rgba(255,255,255,.08);
 padding-top:16px;
 }
 
-.footer-note a{
-color:#00f7ff;
-text-decoration:none;
-}
-
-@media(max-width:520px){
-.app-grid{grid-template-columns:1fr;}
-}
 </style>
 </head>
 
@@ -169,10 +180,10 @@ text-decoration:none;
 
 <div class="header">
 <h1>✨ Welcome to Salim App Zone ✨</h1>
-<p>আপনার প্রিয় সব অ্যাপ ও রিসোর্স এক জায়গায়</p>
+<p>All your favorite apps and resources in one place</p>
 </div>
 
-<div class="section-title">📲 অ্যাপ ডাউনলোড</div>
+<div class="section-title">📲 App Download</div>
 
 <div class="app-grid">
 
@@ -188,59 +199,100 @@ text-decoration:none;
 
 <a href="https://www.mediafire.com/file/7ml5bvz830yjpuo/Efiko__Aesthetic_Filters_1.6.3_PR3MIUM%252B_%2528Safefileku%2529.apk/file" class="btn btn-app">Efiko</a>
 
-<a href="https://www.mediafire.com/file/9ihchfqyyk15axe/WlNK_2.20.2_PR3MIUM_%2528Safefileku%2529.apk/file" class="btn btn-app">Wink ViP +</a>
+<a href="https://www.mediafire.com/file/9ihchfqyyk15axe/WlNK_2.20.2_PR3MIUM_%2528Safefileku%2529.apk/file" class="btn btn-app">Wink VIP +</a>
 
 <a href="https://www.mediafire.com/file/wenqi5tkxwxvvr4/Wink_China_7.22.0_PR3MIUM_%2528Safefileku%2529.apk/file" class="btn btn-app">Wink China</a>
 
 </div>
 
-<div class="section-title">📂 XML ফাইল</div>
+<div class="section-title">📂 XML Files</div>
 
-<a href="https://t.me/xmlfilebox" class="btn btn-xml">📥 XML ফাইল ডাউনলোড করুন</a>
+<a href="https://t.me/xmlfilebox" class="btn btn-xml">Download XML Files</a>
 
-<div class="section-title">🌐 সংযুক্ত থাকুন</div>
+<div class="section-title">🌐 Stay Connected</div>
 
 <div class="button-group">
 
-<a href="https://www.youtube.com/@Salim.editzx" target="_blank" class="btn btn-youtube">▶️ ইউটিউব চ্যানেল</a>
+<a href="https://www.youtube.com/@Salim.editzx" target="_blank" class="btn btn-youtube">
+<i class="fa-brands fa-youtube"></i> YouTube Channel
+</a>
 
-<a href="https://t.me/+33Srlf8jLsZlYjA1" target="_blank" class="btn btn-telegram">✈️ টেলিগ্রাম চ্যানেল</a>
+<a href="https://t.me/+33Srlf8jLsZlYjA1" target="_blank" class="btn btn-telegram">
+<i class="fa-brands fa-telegram"></i> Telegram Channel
+</a>
 
 </div>
 
-<div class="section-title">💬 আপনার প্রয়োজন লিখুন</div>
+<div class="footer-note">
+<p>© 2026 Salim App Zone</p>
+</div>
 
-<div class="chat-box">
+</div>
 
-<textarea id="userMessage" placeholder="আপনার যে অ্যাপ লাগবে লিখুন..."></textarea>
+<button class="chat-toggle" onclick="toggleChat()">
+<i class="fa-solid fa-comments"></i>
+</button>
 
-<button onclick="sendMessage()">📩 পাঠান</button>
+<div id="chatWindow" class="chat-window">
+
+<textarea id="userMessage" placeholder="Ask anything..."></textarea>
+
+<button onclick="sendMessage()">Send</button>
 
 <p id="response"></p>
 
 </div>
 
-<div class="footer-note">
-<p>ⓒ ২০২৬ Salim App Zone | সর্বস্বত্ব সংরক্ষিত</p>
-<p>🔗 <a href="#">প্রাইভেসি পলিসি</a> | <a href="#">কন্টাক্ট</a></p>
-</div>
-
-</div>
-
 <script>
 
-function sendMessage(){
+function toggleChat(){
+
+let chat=document.getElementById("chatWindow");
+
+if(chat.style.display==="block"){
+chat.style.display="none";
+}else{
+chat.style.display="block";
+}
+
+}
+
+/* API KEY HERE */
+
+const API_KEY="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";
+
+async function sendMessage(){
 
 let msg=document.getElementById("userMessage").value;
 
 if(msg.trim()==""){
-alert("কিছু লিখুন আগে!");
+alert("Please type something");
 return;
 }
 
-document.getElementById("response").innerHTML="✅ আপনার মেসেজ পাঠানো হয়েছে:<br><b>"+msg+"</b>";
+document.getElementById("response").innerHTML="Thinking...";
 
-document.getElementById("userMessage").value="";
+let res=await fetch("https://api.openai.com/v1/chat/completions",{
+
+method:"POST",
+
+headers:{
+"Content-Type":"application/json",
+"Authorization":"Bearer "+API_KEY
+},
+
+body:JSON.stringify({
+model:"gpt-4o-mini",
+messages:[{role:"user",content:msg}]
+})
+
+});
+
+let data=await res.json();
+
+let reply=data.choices[0].message.content;
+
+document.getElementById("response").innerHTML="<b>AI:</b> "+reply;
 
 }
 
